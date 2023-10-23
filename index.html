@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket 1</title>
+</head>
+<body>
+    <h1>Learn Socket With PRIYANKA</h1>
+    <h1 id="currentTime">hiii</h1>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+
+  // custom event data 
+  socket.on('myEvent',(data)=>{
+    document.getElementById('currentTime').innerHTML = data
+  })
+//   socket.on('message',(msg)=>{
+    // real data send to website in already exsting tag
+    //  document.getElementById('currentTime').innerHTML = ""
+    // document.getElementById('currentTime').innerHTML = msg
+    // message data send 
+    // document.write(msg)
+//   })
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namespace</title>
+  </head>
+  <body>
+    <h1 id="currentTime">hiiii</h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // const socket = io('/buy'); // Connect to the server
+        // socket.on('myEvent',(msg)=>{
+        //     console.log("tttt",msg)
+        //     document.getElementById('currentTime').innerHTML = msg
+        // })
+        const socket = io('/sell'); // Connect to the server
+         socket.on('myEvent',(msg)=>{
+            console.log("tttt",msg)
+            document.getElementById('currentTime').innerHTML = msg
+        })
+    </script>
+  </body>
+</html>
